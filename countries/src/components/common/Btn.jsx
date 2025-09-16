@@ -11,3 +11,5 @@ export default function Btn({content, onClick, type, className={primary}}) {
             </button>
         </div>
 )}
+
+export {secondary};
