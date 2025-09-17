@@ -6,7 +6,7 @@ import { primary } from '../common/Btn'
 
 export default function Home() {
     return (
-        <div className='flex justify-center items-center mt-[20px]'>
+        <div className='flex justify-center items-center mt-48'>
             <section className='w-[40%]'>
                 <h1>
                     Explore Countries with<span className='text-[#0A61C9] text-[30px]'>Real-Time Data</span>
