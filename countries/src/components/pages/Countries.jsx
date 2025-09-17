@@ -15,7 +15,7 @@ export default function Countries() {
     },[])
 
     return (
-        <div>
+        <div className='grid grid-cols-3 bg-amber-50 mt-3.5'>
             {data.map((country) => {
                 return <CountryCard key={country.cca3} country={country}/>
             })}
