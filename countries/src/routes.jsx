@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router";
 import Home from "./components/pages/home";
 import NavBar from "./components/shared/NavBar";
 import Countries from "./components/pages/Countries";
+import Nation from "./components/pages/Nation";
 
 
 const router = createBrowserRouter([
@@ -14,6 +15,9 @@ const router = createBrowserRouter([
         },{
             path: "/countries",
             element: <Countries/>
+        },{
+            path: "/nation/:cca3",
+            element: <Nation/>
         }]
     }
 ])
