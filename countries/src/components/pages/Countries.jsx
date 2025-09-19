@@ -35,14 +35,16 @@ export default function Countries() {
 
     return (
         <>
-            <div className='flex mt-7 items-center'>
+            <div className='flex flex-col sm:flex-row items-center gap-4 sm:gap-6 mt-7'>
                 <Input placeholder = "search" register={register("search")}/>
                 <Select region={region} setRegion={setRegion}/>
             </div>
-            <div className='grid grid-cols-3 bg-amber-50 mt-3.5 pb-2.5'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 bg-gray-50 mt-6 p-4 rounded-lg'>
                 {filteredCountries.map(country => (
-                    <Link key={country.cca3} to={`/nation/${country.cca3}`}>
-                        <CountryCard country={country}/>
+                    <Link key={country.cca3} to={`/nation/${country.cca3}`} className='focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-xl'>
+                        <div className='bg-white shadow-md rounded-xl p-4 hover:shadow-xl hover:translate-y-1 transition-transform transition-shadow duration-200'>
+                            <CountryCard country={country}/>
+                        </div>
                     </Link>
                 ))}
             </div>
