@@ -35,11 +35,11 @@ export default function Countries() {
 
     return (
         <>
-            <div className='mt-14'>
+            <div className='flex mt-7 items-center'>
                 <Input placeholder = "search" register={register("search")}/>
                 <Select region={region} setRegion={setRegion}/>
             </div>
-            <div className='grid grid-cols-3 bg-amber-50 mt-3.5'>
+            <div className='grid grid-cols-3 bg-amber-50 mt-3.5 pb-2.5'>
                 {filteredCountries.map(country => (
                     <Link key={country.cca3} to={`/nation/${country.cca3}`}>
                         <CountryCard country={country}/>
