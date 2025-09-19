@@ -19,7 +19,7 @@ export default function Nation() {
     return (
         <div className='mt-24 mx-auto max-w-6xl bg-white rounded-3xl shadow-md p-8 md:p-12 text-gray-900'>
             {info ? (
-            <div className='flex flex-col md:flex-row justify-between items-start gap-10'>
+            <div className='flex flex-col md:flex-row justify-between items-center gap-10'>
                 <section className='flex-1'>
                     <h1 className='text-4xl md:text-6xl font-bold mb-8'>
                     {info?.name?.common}
@@ -67,10 +67,8 @@ export default function Nation() {
                         </li>
                     </ul>
                 </section>
-                <div className='flex justify-center items-center text-[120px] md:text-[160px] lg:text-[200px]'>
-                    <i>
-                        {info?.flag}
-                    </i>
+                <div className='flex justify-center items-center flex-1'>
+                    <img src={info.flags.svg} alt={info.flags.alt || `Flag of ${info.name.common}`} className="w-48 md:w-64 lg:w-72 h-auto rounded-xl shadow-lg"/>
                 </div>
             </div>
             ) : (
